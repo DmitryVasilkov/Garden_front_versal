@@ -14,9 +14,9 @@ export default function ProductPage() {
 
     const singleProduct = useSelector(state => state.products.find(el => el.id === +id));
 
-    const { title, price, discont_price, image, description} = singleProduct
+    const { title, price, discount_price, image, description} = singleProduct
 
-    const difference = discont_price === null ? " " : Math.ceil(((price - discont_price) / price) * 100) + "%";
+    const difference = discount_price === null ? " " : Math.ceil(((price - discount_price) / price) * 100) + "%";
 
    
 
@@ -28,8 +28,8 @@ export default function ProductPage() {
                     <img src={`https://garden-server.onrender.com/${image}`} alt="" />
                     <div className={s.inform}>
                         <div className={s.priceBlock}>
-                            <p className={s.price}>{discont_price ?? price}<span>$</span>{" "}</p>
-                            <p className={s.oldPrice}>{discont_price !== null ? `${price}$` : ""}</p>
+                            <p className={s.price}>{discount_price ?? price}<span>$</span>{" "}</p>
+                            <p className={s.oldPrice}>{discount_price !== null ? `${price}$` : ""}</p>
                             <p className={s.sale}>{difference}</p>
                         </div>
                         <button onClick={() => dispatch(addAction({id: +id, title, price, image}))} className={s.addBtn}>

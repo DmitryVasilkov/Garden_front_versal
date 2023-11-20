@@ -22,19 +22,19 @@ export const productsReducer = (state=[], action) => {
       return [...state].sort((a, b) => a.price - b.price)
     } else if(action.payload === 'price_desc'){
       return [...state].sort((a, b) => {
-        const getPrice = (el) => (el.discont_price !== null ? el.discont_price : el.price)
+        const getPrice = (el) => (el.discount_price !== null ? el.discount_price : el.price)
         return getPrice(b) - getPrice(a);
       })
     } else if(action.payload === 'price_asc'){
       return [...state].sort((a, b) => {
-        const getPrice = (el) => (el.discont_price !== null ? el.discont_price : el.price)
+        const getPrice = (el) => (el.discount_price !== null ? el.discount_price : el.price)
         return getPrice(a) - getPrice(b);
       })
     }
   } else if(action.type === FILTER_PRODUCTS) {
     const { min_value, max_value } = action.payload;
     return state.map(el => {
-      let actualPrice = el.discont_price || el.price
+      let actualPrice = el.discount_price || el.price
       if(actualPrice >= min_value && actualPrice <= max_value){
         el.show_product = true
       } else {
@@ -45,7 +45,7 @@ export const productsReducer = (state=[], action) => {
   } else if (action.type === GET_DISCOUNT_PRODUCTS) {
     if(action.payload){
       return state.map(el => {
-        if(el.discont_price === null){
+        if(el.discount_price === null){
           el.show_product_by_sale = false
         }
         return el

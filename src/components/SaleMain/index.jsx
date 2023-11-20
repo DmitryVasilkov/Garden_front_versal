@@ -10,7 +10,7 @@ export default function SaleMain() {
 
    
 
-    const products_with_discount = products.filter((el) => el.discont_price !== null)
+    const products_with_discount = products.filter((el) => el.discount_price !== null)
                                            .filter((el) => el.show_product === true)
                                            .sort(() => Math.random() - 0.5)
                                            .slice(0, 4)

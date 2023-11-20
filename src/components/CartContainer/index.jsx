@@ -39,7 +39,7 @@ export default function CartContainer() {
         dispatch(clearAction(true))
       };
 
-    const amountCart = filled_cart.reduce((acc, el) => acc + (el.discont_price ?? el.price) * el.count, 0).toFixed(2);
+    const amountCart = filled_cart.reduce((acc, el) => acc + (el.discount_price ?? el.price) * el.count, 0).toFixed(2);
 
     
   return (

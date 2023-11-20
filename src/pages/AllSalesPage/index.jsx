@@ -16,7 +16,7 @@ export default function AllSalesPage() {
 
   const products = useSelector(state => state.products);
 
-  const products_with_discount = products.filter((el) => el.discont_price !== null)
+  const products_with_discount = products.filter((el) => el.discount_price !== null)
 
 
   return (

@@ -5,12 +5,12 @@ import { decrementAction, deleteAction, incrementAction, setCountAction } from '
 import { CiCircleRemove, CiTrash } from "react-icons/ci";
 import { LINK } from '../../requests/link';
 
-export default function Cart({id, title, price, discont_price, image, count}) {
+export default function Cart({id, title, price, discount_price, image, count}) {
 
-  const currentPrice = (discont_price ?? price) * 1;
+  const currentPrice = (discount_price ?? price) * 1;
 
   const dispatch = useDispatch();
-
+  
   const [confirmDeleting, setConfirmDeleting] = useState(false);
 
   
