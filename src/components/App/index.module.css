@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerMenuLinks > a.active {
+  color: #339933 !important;
+  font-weight: 500;
+}
+

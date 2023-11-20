@@ -1,0 +1,41 @@
+.wrapper {
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    color: white;
+}
+
+.wrapper .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px; 
+}
+.wrapper .info h2 {
+    padding-top: 40px;
+    font-weight: 700;
+    font-size: 80px;
+    -webkit-text-stroke-color: #393;
+    -webkit-text-stroke-width: 1px;
+}
+
+.wrapper .info h3 {
+    font-weight: 700;
+    font-size: 63px;
+    -webkit-text-stroke-color: #393;
+    -webkit-text-stroke-width: 1px;
+    
+}
+
+.sale{
+    /* background: #b1fdb1; */
+    padding: 25px 50px;
+    border-radius: 13px;
+    border: none;
+    color: #2D2D2D;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 700;
+    
+}

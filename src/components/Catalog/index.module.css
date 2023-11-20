@@ -1,0 +1,27 @@
+.wrapper{
+    color: #575959;
+    margin: 40px auto;
+    /* width: 97%; */
+}
+
+.titleButton {
+    display: flex;
+    gap: 70px;
+    padding-bottom: 20px;
+}
+
+.titleButton h2 {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.button {
+    color: #8B8B8B;
+    background-color: transparent;
+    border: 3px solid #8b8b8b;
+    border-radius: 0;
+    padding: 12px 6px;
+    text-decoration: none;
+    text-align: center;
+}

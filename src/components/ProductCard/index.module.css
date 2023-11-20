@@ -1,0 +1,83 @@
+.wrapper{
+    position: relative;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+}
+.product img{
+    border-radius: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    width: 100%;
+}
+.wrapper button{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.wrapper:hover button{
+    visibility: visible;
+    opacity: 1;
+}
+
+.prices{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price{
+    font-size: 30px;
+    font-weight: 600;
+}
+.oldPrice{
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #8b8b8b;
+}
+
+.price span,
+.oldPrice span{
+    font-size: 0.6em;
+}
+
+.discount{
+    font-size: 20px;
+    color: #ff32a1;
+}
+
+.title{
+    color: #3a3a3a;
+    font-size: 16px;
+    padding-top: 10px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.addToCartBtn {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 0;
+    background: linear-gradient(95deg, #393, #a2ff8b);;
+    color: #00ff2a;
+    width: 90%;
+    margin: 0 auto;
+    visibility: hidden;
+    opacity: 0.1;
+    transition: 0.8s;
+    font-size: 30px;
+}
+
+.addToCartBtn svg{
+    color: #393;
+    text-decoration: none;
+    font-size: 30px;
+}

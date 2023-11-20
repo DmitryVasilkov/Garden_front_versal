@@ -1,0 +1,17 @@
+.sort{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sort p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sort select {
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #000;
+    cursor: pointer;
+}

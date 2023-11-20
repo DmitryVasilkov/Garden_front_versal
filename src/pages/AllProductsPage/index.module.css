@@ -1,0 +1,19 @@
+.filter_sort{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 200px;
+    padding: 20px 0;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+.filter_sort{
+    gap: 20px;
+}
+}
+
+@media (max-width: 930px){
+.filter_sort{
+    grid-template-columns: 1fr;
+}
+}

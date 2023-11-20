@@ -1,0 +1,31 @@
+.filter{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.filter input {
+    border-radius: 7px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.filter button {
+    border-radius: 7px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.filter p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.clearFilters{
+    cursor: pointer;
+    user-select: none;
+}
+.filter button:hover{
+color: green;
+transform: scale(2); 
+}
