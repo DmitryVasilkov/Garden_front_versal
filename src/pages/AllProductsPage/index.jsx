@@ -18,14 +18,16 @@ export default function AllProductsPage() {
     const products = useSelector(state => state.products)
 
   return (
-    <Wrapper>
+    <Wrapper className={s.mobile}>
       <Title>All products</Title>
       <div className={s.filter_sort}>
         <FilterForm/>
         <DiscountForm/>
         <SortForm/>
-      </div>
+      </div >
+      <div className={s.products_wrapper_mobile}>
         <ProductsContainer products={products} category={id}/>
+      </div>
     </Wrapper>
   )
 }

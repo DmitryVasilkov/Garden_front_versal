@@ -1,4 +1,4 @@
-.filter_sort{
+.filter_sort {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 200px;
@@ -7,8 +7,11 @@
 }
 
 @media (max-width: 1200px) {
-.filter_sort{
+.filter_sort {
     gap: 20px;
+}
+.mobile {
+    padding: 20px;
 }
 }
 
@@ -17,3 +20,12 @@
     grid-template-columns: 1fr;
 }
 }
+
+@media(max-width: 540px){
+    .filter_sort{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+

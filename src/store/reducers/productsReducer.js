@@ -14,7 +14,7 @@ export const getDiscountProductsAction = payload => ({ type: GET_DISCOUNT_PRODUC
 
 export const productsReducer = (state=[], action) => {
   if(action.type === LOAD_ALL_PRODUCTS){
-    return action.payload.map(el => ({...el, show_product: true, show_product_by_sale: true}))
+    return action.payload.map(el => ({...el, show_product: true, show_product_by_sale: true, status: 'ready'}))
   } else if(action.type === SORT_PRODUCTS){
     if(action.payload === 'title'){
       return [...state].sort((a, b) => a.title.localeCompare(b.title))

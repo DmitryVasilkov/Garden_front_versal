@@ -9,11 +9,13 @@ import DiscountForm from '../../components/DiscountForm'
 
 export default function MainPage() {
   return (
+    <>
     <Wrapper>
         <Banner/>
         <Catalog/>
         <DiscountForm/>
         <SaleMain/>
     </Wrapper>
+    </>
   )
 }

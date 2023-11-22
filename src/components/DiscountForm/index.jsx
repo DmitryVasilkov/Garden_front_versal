@@ -31,7 +31,7 @@ export default function DiscountForm() {
 
     return (
         <div className={s.wrapper}>
-          <img src={img} alt="gnome" />
+          <img className={s.gnom} src={img} alt="gnome" />
           <div className={s.form}>
               <h2>5% off</h2>
               <h3>on the first order</h3>

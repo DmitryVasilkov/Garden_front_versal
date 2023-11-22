@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import s from './index.module.css'
 import { addAction } from '../../store/reducers/cartReducer';
 import Wrapper from '../../components/UI/Wrapper';
 import Title from '../../components/UI/Title';
+import { LINK } from '../../requests/link';
 
 export default function ProductPage() {
 
@@ -14,18 +15,24 @@ export default function ProductPage() {
 
     const singleProduct = useSelector(state => state.products.find(el => el.id === +id));
 
+    console.log(singleProduct);
+
     const { title, price, discount_price, image, description} = singleProduct
 
     const difference = discount_price === null ? " " : Math.ceil(((price - discount_price) / price) * 100) + "%";
 
-   
+
 
   return (
-    <Wrapper>
+    <>
+    {
+    singleProduct.status === 'ready'
+    ?
+    <Wrapper className={s.wrapperMob}>
         <div className={s.mainWrap}>
-                <Title>{title}</Title>
+                <Title className={s.productTitle}>{title}</Title>
                 <div className={s.productWrap}>
-                    <img src={`https://garden-server.onrender.com/${image}`} alt="" />
+                    <img src={`${LINK}/${image}`} alt="" />
                     <div className={s.inform}>
                         <div className={s.priceBlock}>
                             <p className={s.price}>{discount_price ?? price}<span>$</span>{" "}</p>
@@ -35,13 +42,18 @@ export default function ProductPage() {
                         <button onClick={() => dispatch(addAction({id: +id, title, price, image}))} className={s.addBtn}>
                             To Cart
                         </button>
-                        <p className={s.description}> 
+                        <div className={s.description}> 
                             <p>Description</p>
                             <p>{description}</p>
-                        </p>
+                        </div>
                     </div>
                 </div>
         </div>
     </Wrapper>
+    :
+    []
+    } 
+    </>
+    
   )
 }

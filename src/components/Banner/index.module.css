@@ -39,3 +39,9 @@
     font-weight: 700;
     
 }
+
+@media(max-width: 414px){
+    .section_catalog{
+      margin-bottom: 0;
+  }
+  }

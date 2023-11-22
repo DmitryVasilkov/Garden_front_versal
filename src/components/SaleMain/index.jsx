@@ -16,7 +16,7 @@ export default function SaleMain() {
                                            .slice(0, 4)
 
   return (
-    <Wrapper>
+    <Wrapper className={s.mobile}>
         <p className={s.title}>Sale</p>
         <ProductsContainer products={products_with_discount}/>
     </Wrapper>

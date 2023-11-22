@@ -12,7 +12,7 @@ export default function Catalog() {
     const catalog = categories.slice(0, 4);
 
   return (
-    <Wrapper>
+    <Wrapper className={s.outside_wrapper}>
       <div className={s.wrapper}>
           <div className={s.titleButton}>
               <h2>Catalog</h2>

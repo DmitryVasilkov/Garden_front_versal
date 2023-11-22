@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { firstOrder } from '../../requests/order';
 import { clearAction } from '../../store/reducers/cartReducer';
 import { useCart } from '../hooks/useCart';
+import Wrapper from '../UI/Wrapper';
 
 
 
@@ -48,33 +49,36 @@ export default function CartContainer() {
     
     <div className={s.cartContainerWrapper}>
 
-                <div>
+                <div className={s.cart_img}>
                     {
-                        filled_cart.length === 0 ? (<img src={empty_cart} alt="empty_cart"/>) : cart_state.map(el => <Cart key={el.id} {...el} />)
+                        filled_cart.length === 0 ? (<img className={s.empty_mobile} src={empty_cart} alt="empty_cart"/>) : cart_state.map(el => <Cart key={el.id} {...el} />)
                     }
                 </div>
-
-                {
-                    cart_state.length === 0 
-                    ? 
-                    <div className={s.zeroAmountBlock}>{resp.status === 'OK' ? 'Your order has been placed!' : 'Cart is empty'}</div>
-                    :
-                    <div className={s.amountBlock}>
-                        <p>Order details</p>
-                        <div>
-                            <p>Total:</p>
-                            <p>
-                                {amountCart} <span>$</span>{" "}
-                            </p>
+                    
+                    {
+                    
+                        cart_state.length === 0 
+                        ? 
+                        <div className={s.zeroAmountBlock}>{resp.status === 'OK' ? 'Your order has been placed!' : 'Cart is empty'}</div>
+                        :
+                        <div className={s.amountBlock}>
+                            <p>Order details</p>
+                            <div>
+                                <p>Total:</p>
+                                <p>
+                                    {amountCart} <span>$</span>{" "}
+                                </p>
+                            </div>
+                            
+                            <form onSubmit={handleSubmit(submit)}>
+                                <p className={s.error_text}>{errors.number?.message}</p>
+                                <input className={s.input} type="text" name='number' placeholder='+49' {...numberRegister} />
+                                <button className={s.getDiscount}>{resp.status === 'OK' ? 'Your order has been placed!' : 'Place order'}</button>
+                            </form>
                         </div>
-                        
-                        <form onSubmit={handleSubmit(submit)}>
-                            <p className={s.error_text}>{errors.number?.message}</p>
-                            <input className={s.input} type="text" name='number' placeholder='+49' {...numberRegister} />
-                            <button className={s.getDiscount}>{resp.status === 'OK' ? 'Your order has been placed!' : 'Place order'}</button>
-                        </form>
-                    </div>
-                }    
+                    
+                    } 
+                      
                 
     </div>
 

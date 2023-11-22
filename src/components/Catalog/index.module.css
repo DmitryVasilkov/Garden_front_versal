@@ -25,3 +25,9 @@
     text-decoration: none;
     text-align: center;
 }
+
+@media(max-width:540px){
+    .outside_wrapper{
+        padding: 20px;
+    }
+}

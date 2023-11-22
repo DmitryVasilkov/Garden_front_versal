@@ -29,3 +29,8 @@
 color: green;
 transform: scale(2); 
 }
+@media(max-width: 390px){
+    .filter{
+        flex-direction: column;
+    }
+    }

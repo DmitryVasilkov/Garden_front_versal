@@ -35,11 +35,11 @@ function App() {
 
   useEffect(() => {
                   dispatch(getAllCategories)
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
                   dispatch(getAllProducts)
-  }, []);
+  }, [dispatch]);
 
   return (
 

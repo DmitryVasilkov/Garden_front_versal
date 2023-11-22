@@ -3,3 +3,9 @@
     font-weight: 700;
     padding: 50px 0 20px 0;
 }
+
+@media(max-width:540px){
+    .mobile{
+        padding: 20px;
+    }
+}

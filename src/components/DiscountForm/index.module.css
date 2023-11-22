@@ -7,7 +7,6 @@
     align-items: center;
     justify-items: center;
     color: white;
-    /* box-shadow: 10px 5px 5px #393; */
     background-image: url(./../Banner/banner2.jpg);
 }
 .form {
@@ -32,12 +31,9 @@
 
 .getDiscount {
     padding: 10px;
-    /* background-color: transparent; */
     border: none;
     border-radius: 20px;
     color: white;
-    /* -webkit-text-stroke-color: #393;
-    -webkit-text-stroke-width: 1px; */
     font-size: 28px;
     font-weight: 700;
     background: linear-gradient(95deg, #393, #a2ff8b);
@@ -55,7 +51,6 @@
     border-radius: 25px;
     border: 2px solid rgb(200, 253, 7);
     background-color: white;
-    /* border: 3px solid white; */
     color: black;
     padding: 30px;
     width: 100%;
@@ -72,38 +67,19 @@ input::placeholder{
     
 }
 
-
-
-/* 
-@media(max-width:414px){
-    .container{
-       display: grid;
-       justify-content: center;
-       padding: 27px 100px;
-       gap: 10px;
-    }
-    .container img{
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
-    }
-    .discount h1{
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    .discount input {
-        width: 300px;
-    }
-    .discount button {
-        width: 300px;
-    }
-} */
-
 @media (max-width: 1024px) {
     .wrapper {
         grid-template-columns: 1fr;
+        height: 650px;
     }
-    .wrapper img {
-        display: none;
+    .gnom {
+        height: 150px;
+        width: 150px;
+    }
+    .form {
+        text-align: center;
+    }
+    .error_text {
+        color: black;
     }
 }
