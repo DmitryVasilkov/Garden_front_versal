@@ -1,6 +1,6 @@
 
   header{
-    height: 170px;
+    height: 100px;
   }
 
   .header{
@@ -135,8 +135,12 @@
         background-color: transparent;
         color: black;
     }
+    .links{
+        gap: 50px;
+    }
     .links a {
         color: black;
+        font-size: 18px;
     }
 }
 
